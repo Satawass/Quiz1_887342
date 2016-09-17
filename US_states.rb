@@ -69,7 +69,7 @@ US_final = {}
 
 US_NT_sort.each {
     |name, stand|
-    if (name[0] == "A" || name[0] == "E" || name[0] == "I" || name[0] == "O" || name[0] == "U") && (name[name.length-1] == "a" || name[name.length-1] == "e" || name[name.length-1] == "i" || name[name.length-1] == "o" || name[name.length-1] == "u")
+    if ["a","e","i","o","u"].include?(name[0].downcase) && ["a","e","i","o","u"].include?(name[-1].downcase)
         US_final[name] = stand
         puts name
     end
