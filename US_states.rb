@@ -55,7 +55,7 @@
 US_NT = {}	
 US_states.each {
     |name, stand|
-    if(stand[1] == "T" || stand[1] == "N")
+    if ["T","N"].include?(stand[1])
         US_NT[name] = stand
         puts stand
     end
