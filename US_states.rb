@@ -75,4 +75,5 @@ US_NT_sort.each {
     end
 }
 
+puts US_final
 
