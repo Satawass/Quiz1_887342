@@ -16,7 +16,7 @@ def prime_hash(number)
     loop do 
         break if count > number
         if prime(i)
-            pk["p"+count.to_s] = i
+            pk[("p"+count.to_s).to_sym] = i
             count +=1
         end
         i += 1
@@ -25,9 +25,6 @@ def prime_hash(number)
     return pk
 end
 
-sum = prime_hash(5)
+sum = prime_hash(12)
 
-sum.each {
-    |key, value|
-    puts "#{key} => #{value}"
-}
+puts sum
