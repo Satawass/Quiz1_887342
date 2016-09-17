@@ -57,9 +57,12 @@ US_states.each {
     |name, stand|
     if(stand[1] == "T" || stand[1] == "N")
         US_NT[name] = stand
+        puts stand
     end
     
 }
+
+puts "==============================="
 
 US_NT_sort = US_NT.sort {|item1, item2| item2 <=> item1}
 US_final = {}
